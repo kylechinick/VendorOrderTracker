@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-  <OrderGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2" />
-  </OrderGroup>
+  </ItemGroup>
 
-  <OrderGroup>
+  <ItemGroup>
     <ProjectReference Include="..\VendorOrderTracker\VendorOrderTracker.csproj" />  
-  </OrderGroup>
+  </ItemGroup>
 
 </Project>
