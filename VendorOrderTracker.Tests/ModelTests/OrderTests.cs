@@ -25,9 +25,10 @@ namespace VendorOrderTracker.Tests
     {
       //Arrange
       string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
 
       //Act
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, title);
       string result = newOrder.Title;
 
       //Assert
