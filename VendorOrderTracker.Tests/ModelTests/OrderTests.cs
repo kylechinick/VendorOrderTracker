@@ -134,14 +134,13 @@ namespace VendorOrderTracker.Tests
       string description = "A literal pallet stacked with bread";
       string price = "priceTest";
       string date = "dateTest";
-
       Order newOrder = new Order(title, description, price, date);
 
       string updatedDate = "01/01/2023";
       newOrder.Date = updatedDate;
       string result = newOrder.Date;
 
-      Assert.AreEqual("test", result);
+      Assert.AreEqual(updatedDate, result);
     }
 
     [TestMethod]
