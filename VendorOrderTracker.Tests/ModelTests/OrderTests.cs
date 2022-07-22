@@ -73,7 +73,7 @@ namespace VendorOrderTracker.Tests
       Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Date;
 
-      Assert.AreEqual(price, result);
+      Assert.AreEqual(date, result);
     }
 
     [TestMethod]
