@@ -43,5 +43,20 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+      public void SetDescription_SetDescription_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+
+      Order newOrder = new Order(description, title);
+
+      string updatedDescription = "A towering pallet stacked with bread";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
