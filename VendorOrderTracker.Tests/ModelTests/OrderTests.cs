@@ -45,6 +45,21 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
+      public void SetTitle_SetTitle_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+
+      Order newOrder = new Order(description, title);
+
+      string updatedTitle = "Bread Pallet 3000MaxExtreme";
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+
+      Assert.AreEqual(updatedTitle, result);
+    }
+
+    [TestMethod]
       public void SetDescription_SetDescription_String()
     {
       string title = "Bread Pallet";
