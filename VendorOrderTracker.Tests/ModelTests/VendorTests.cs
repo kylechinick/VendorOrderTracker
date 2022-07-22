@@ -74,10 +74,13 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
-      Order newOrder = new Order(description, title);
+      string price = "priceTest";
+      string date = "dateTest";
+      Order newOrder = new Order(title, description, price, date);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Work";
       Vendor newVendor = new Vendor(name);
+      
       newVendor.AddOrder(newOrder);
 
       List<Order> result = newVendor.Orders;

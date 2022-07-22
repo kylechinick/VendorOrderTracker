@@ -7,6 +7,11 @@ namespace VendorOrderTracker.Controllers
 {
   public class VendorsController : Controller
   {
-    // TBD
+    [HttpGet("/vendors")]
+    public ActionResult Index()
+    {
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
   }
 }

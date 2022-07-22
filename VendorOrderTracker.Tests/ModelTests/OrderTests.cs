@@ -16,7 +16,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "title");
+      Order newOrder = new Order("titleTest", "descriptionTest", "priceTest", "dateTest");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     
@@ -25,8 +25,10 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
 
-      Order newOrder = new Order(description, title);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
 
       Assert.AreEqual(title, result);
@@ -37,9 +39,25 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
 
-      Order newOrder = new Order(description, title);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Description;
+
+      Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+      public void GetPrice_ReturnsPrice_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
+
+      Order newOrder = new Order(title, description, price, date);
+      string result = newOrder.Price;
 
       Assert.AreEqual(description, result);
     }
@@ -49,8 +67,10 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
 
-      Order newOrder = new Order(description, title);
+      Order newOrder = new Order(title, description, price, date);
 
       string updatedTitle = "Bread Pallet 3000MaxExtreme";
       newOrder.Title = updatedTitle;
@@ -64,8 +84,10 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
 
-      Order newOrder = new Order(description, title);
+      Order newOrder = new Order(title, description, price, date);
 
       string updatedDescription = "A towering pallet stacked with bread";
       newOrder.Description = updatedDescription;
