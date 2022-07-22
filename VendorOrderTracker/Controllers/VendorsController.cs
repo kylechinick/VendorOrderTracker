@@ -21,10 +21,10 @@ namespace VendorOrderTracker.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName)
+    public ActionResult Create(string vendorName, string vendorDescription)
     {
-      Vendor newVendor = new Vendor(vendorName);
-      return RedirectToAction("Index");
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/{id}")]
