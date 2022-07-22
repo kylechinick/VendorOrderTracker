@@ -72,7 +72,6 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
-      //Arrange
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
       Order newOrder = new Order(description, title);
@@ -81,10 +80,8 @@ namespace VendorOrderTracker.Tests
       Vendor newVendor = new Vendor(name);
       newVendor.AddOrder(newOrder);
 
-      //Act
       List<Order> result = newVendor.Orders;
 
-      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
   }
