@@ -35,7 +35,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void GetDescription_ReturnsDescription_String()
+    public void GetDescription_ReturnsDescription_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -49,7 +49,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void GetPrice_ReturnsPrice_String()
+    public void GetPrice_ReturnsPrice_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -63,7 +63,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void GetDate_ReturnsDate_String()
+    public void GetDate_ReturnsDate_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -77,7 +77,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void SetTitle_SetTitle_String()
+    public void SetTitle_SetTitle_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -94,7 +94,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void SetDescription_SetDescription_String()
+    public void SetDescription_SetDescription_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -110,8 +110,8 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
-        [TestMethod]
-      public void SetPrice_SetPrice_String()
+    [TestMethod]
+    public void SetPrice_SetPrice_String()
     {
       string title = "Bread Pallet";
       string description = "A literal pallet stacked with bread";
@@ -128,6 +128,23 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
+    public void SetDate_SetDate_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
+
+      Order newOrder = new Order(title, description, price, date);
+
+      string updatedDate = "01/01/2023";
+      newOrder.Date = updatedDate;
+      string result = newOrder.Date;
+
+      Assert.AreEqual("test", result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> { };
@@ -136,6 +153,5 @@ namespace VendorOrderTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
-
   }
 }
