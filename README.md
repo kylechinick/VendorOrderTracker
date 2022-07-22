@@ -2,6 +2,8 @@
 
 #### Summary
 
+Order management program for the fictional shop Pierre's Bakery.
+
 Create vendors, view a list of vendors, and create and view a list of orders per vendor.
 
 #### By Kyle Chinick
