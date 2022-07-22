@@ -21,7 +21,9 @@ This app allows serves as a vendor and order management system for a fictional s
 
 Once loaded the user will land on a simple splash page with options to view or add vendors to the system. Choosing to add a vendor serves the user a new-vendor form which, once submitted, saves the vendor data and redirects the user to the homepage.
 
-Viewing the list of vendors will display all saved vendors – the names of each vendor can be clicked to be taken to a vendor-detail page that displays the vendor name, description and all associated orders. Users can also add orders to a vendor from this page via a new-order link which, in a similar manner to the new vendor creation process, takes the user to an order form where they can enter and save their order to the vendor.
+Viewing the list of vendors will display all saved vendors. The names of each vendor can be clicked to be taken to a vendor-detail page that displays the vendor name, description and all associated orders. 
+
+Users can also add orders to a vendor from the vendor-detail page via a new-order link which takes the user to an order form where they can enter and save their order to the vendor.
 
 ## Setup/Installation Requirements
 
