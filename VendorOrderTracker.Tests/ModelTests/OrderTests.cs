@@ -63,6 +63,20 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
+      public void GetDate_ReturnsDate_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
+
+      Order newOrder = new Order(title, description, price, date);
+      string result = newOrder.Date;
+
+      Assert.AreEqual(price, result);
+    }
+
+    [TestMethod]
       public void SetTitle_SetTitle_String()
     {
       string title = "Bread Pallet";
@@ -80,23 +94,6 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-      public void SetPrice_SetPrice_String()
-    {
-      string title = "Bread Pallet";
-      string description = "A literal pallet stacked with bread";
-      string price = "priceTest";
-      string date = "dateTest";
-
-      Order newOrder = new Order(title, description, price, date);
-
-      string updatedPrice = "Two dollars";
-      newOrder.Price = updatedPrice;
-      string result = newOrder.Price;
-
-      Assert.AreEqual(updatedPrice, result);
-    }
-
-    [TestMethod]
       public void SetDescription_SetDescription_String()
     {
       string title = "Bread Pallet";
@@ -111,6 +108,23 @@ namespace VendorOrderTracker.Tests
       string result = newOrder.Description;
 
       Assert.AreEqual(updatedDescription, result);
+    }
+
+        [TestMethod]
+      public void SetPrice_SetPrice_String()
+    {
+      string title = "Bread Pallet";
+      string description = "A literal pallet stacked with bread";
+      string price = "priceTest";
+      string date = "dateTest";
+
+      Order newOrder = new Order(title, description, price, date);
+
+      string updatedPrice = "Two dollars";
+      newOrder.Price = updatedPrice;
+      string result = newOrder.Price;
+
+      Assert.AreEqual(updatedPrice, result);
     }
 
     [TestMethod]
